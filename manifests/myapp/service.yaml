@@ -3,9 +3,12 @@ kind: Service
 metadata:
   name: myapp
   namespace: myapp
+  labels:
+    app: myapp
 spec:
   selector:
     app: myapp
   ports:
-    - port: 80
+    - name: http
+      port: 80
       targetPort: 8000
