@@ -1,0 +1,14 @@
+cluster:
+  name: mycluster
+
+destinations:
+  - name: loki
+    type: loki
+    url: http://loki.monitoring.svc.cluster.local:3100/loki/api/v1/push
+
+podLogs:
+  enabled: true
+  gatherMethod: kubernetesApi
+
+alloy-logs:
+  enabled: true
